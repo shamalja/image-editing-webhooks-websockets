@@ -1,4 +1,4 @@
-# Image Upload with Webhook and WebSocket Integration#
+# Image Upload with Webhook and WebSocket Integration #
 
 This project demonstrates an application where users can upload an image via the frontend, and the backend processes the image through a webhook using Filestack's services. A thumbnail is generated for the uploaded image, and the WebSocket server sends the generated thumbnail's URL to the frontend, where it is displayed alongside the original image.
 
