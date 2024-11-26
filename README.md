@@ -1,8 +1,8 @@
-#Image Upload with Webhook and WebSocket Integration#
+# Image Upload with Webhook and WebSocket Integration#
 
 This project demonstrates an application where users can upload an image via the frontend, and the backend processes the image through a webhook using Filestack's services. A thumbnail is generated for the uploaded image, and the WebSocket server sends the generated thumbnail's URL to the frontend, where it is displayed alongside the original image.
 
-##Features
+## Features
 
 **Image Upload:** Allows users to upload images using the Filestack API.
 **Filestack Webhooks:** Processes uploaded images and generates thumbnails.
@@ -16,39 +16,39 @@ This project demonstrates an application where users can upload an image via the
 **API:** Filestack API
 **WebSocket:** For real-time communication between the server and frontend
 
-##How It Works
+## How It Works
 
-###Frontend:
+### Frontend:
 
 - The user uploads an image via the file input.
 - The uploaded image is displayed immediately as the "Original Image."
 
-###Backend:
+### Backend:
 
 - A webhook is triggered upon the file upload.
 - The backend verifies the webhook signature and processes the request.
 - A thumbnail is generated using Filestack transformations.
 - The thumbnail URL is sent to the frontend via WebSocket.
 
-###Frontend (Real-Time Update):
+### Frontend (Real-Time Update):
 
 - The frontend receives the thumbnail URL through WebSocket.
 - The thumbnail is displayed next to the original image.
 
-##Installation and Setup
+## Installation and Setup
 
-###Prerequisites
+### Prerequisites
 
 - Node.js installed on your machine
 - Filestack API key and Webhook secret
 - ngrok for exposing your local backend to Filestack's webhook (useful for local server testing).
   
-###Clone the Repository
+### Clone the Repository
 
 `git clone https://github.com/shamalja/image-upload-webhook-websocket.git`
 `cd image-upload-webhook-websocket`
 
-###Backend Setup
+### Backend Setup
 
 - Navigate to the backend folder.
 - Install dependencies:
