@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Upload with Webhook</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      max-width: 800px;
+    }
+    h1 {
+      color: #333;
+    }
+    input[type="file"] {
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .output {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 20px;
+    }
+    .output .image-container {
+      text-align: center;
+    }
+    .output img {
+      max-width: 200px;
+      margin: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Upload an Image</h1>
+    <input type="file" id="fileInput" accept="image/*">
+    <div class="output">
+      <div class="image-container">
+        <h3>Original Image</h3>
+        <img id="originalImage" src="" alt="Original Image">
+      </div>
+      <div class="image-container">
+        <h3>Thumbnail</h3>
+        <img id="thumbnailImage" src="" alt="Thumbnail">
+      </div>
+    </div>
+  </div>
+
+  <!-- Include Filestack JavaScript SDK -->
+  <script src="https://static.filestackapi.com/filestack-js/3.27.0/filestack.min.js"></script>
+  <script>
+    const client = filestack.init('YOUR_API_KEY'); // Replace with your Filestack API Key 
+
+    // WebSocket connection
+    const socket = new WebSocket('ws://localhost:8080'); // Replace with your backend WebSocket URL
+
+    socket.onopen = () => {
+      console.log('WebSocket connection established');
+    };
+
+    socket.onmessage = (event) => {
+      const data = JSON.parse(event.data);
+      console.log('Message from backend:', data);
+
+      if (data.thumbnailUrl) {
+        console.log('Thumbnail URL exists');
+        document.getElementById('thumbnailImage').src = data.thumbnailUrl;
+      }
+    };
+
+    socket.onclose = () => {
+      console.log('WebSocket connection closed');
+    };
+
+    // Handle file upload
+    async function uploadFile(file) {
+      try {
+        const response = await client.upload(file);
+        console.log('Upload Response:', response);
+        const fileHandle = response.handle;
+
+        // Show the original image
+        const originalImageUrl = `https://cdn.filestackcontent.com/${fileHandle}`;
+        document.getElementById('originalImage').src = originalImageUrl;
+
+        console.log('Image uploaded. Waiting for webhook to process the thumbnail.');
+      } catch (error) {
+        console.error('Error uploading file:', error);
+        alert('File upload failed.');
+      }
+    }
+
+    document.getElementById('fileInput').addEventListener('change', (event) => {
+      const file = event.target.files[0];
+      if (file) {
+        uploadFile(file);
+      } else {
+        alert('Please select a file.');
+      }
+    });
+  </script>
+</body>
+</html>
