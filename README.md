@@ -51,9 +51,9 @@ This project demonstrates an application where users can upload an image via the
   
 ### Clone the Repository
 
-`git clone [https://github.com/shamalja/image-upload-webhook-websocket.git](https://github.com/shamalja/image-editing-webhooks-websockets)`
+`git clone https://github.com/shamalja/image-editing-webhooks-websockets`
 
-`cd image-upload-webhook-websocket`
+`cd image-editing-webhooks-websockets`
 
 ### Backend Setup
 
