@@ -12,11 +12,14 @@ This project demonstrates an application where users can upload an image via the
 
 **Responsive Design:** Clean and user-friendly UI.
 
-##Technologies Used
+## Technologies Used
 
 **Frontend:** HTML, CSS, JavaScript
+
 **Backend:** Node.js, Express.js
+
 **API:** Filestack API
+
 **WebSocket:** For real-time communication between the server and frontend
 
 ## How It Works
@@ -60,7 +63,7 @@ This project demonstrates an application where users can upload an image via the
 
 - Replace the placeholders in the backend (index.js) with your Filestack API key and Webhook secret:
 
-####javascript
+#### javascript
 
 ```const secret = 'YOUR_WEBHOOK_SECRET'; // Replace with your Filestack webhook secret
 const filestackApiKey = 'YOUR_API_KEY'; // Replace with your Filestack API key```
@@ -75,23 +78,23 @@ const filestackApiKey = 'YOUR_API_KEY'; // Replace with your Filestack API key``
 
 - Copy the generated https URL and update it in your Filestack Webhook configuration.
 
-###Frontend Setup
+### Frontend Setup
 
 - Replace the placeholder API key in the frontend HTML file with your Filestack API key:
 
-####javascript
+#### javascript
 
 `const client = filestack.init('YOUR_API_KEY'); // Replace with your Filestack API Key`
 
 - Open the HTML file in a browser.
 
-##Usage
+## Usage
 - Open the frontend in your browser.
 - Upload an image using the file input.
 - The original image will display instantly.
 - After the webhook processes the uploaded image, the thumbnail will appear next to the original image.
 
-##Project Structure
+## Project Structure
 .
 ├── backend
 │   └── index.js   # Node.js backend handling webhook and WebSocket
@@ -99,24 +102,24 @@ const filestackApiKey = 'YOUR_API_KEY'; // Replace with your Filestack API key``
 │   └── index.html # Frontend HTML file for the image upload UI
 └── README.md      # This file
 
-##Example Output
+## Example Output
 
 **Original Image:** Displays the uploaded image.
 **Thumbnail:** Displays the generated thumbnail beside the original image.
 
-##Troubleshooting
+## Troubleshooting
 - Ensure the Filestack Webhook secret matches the one configured in the backend.
 - Check the WebSocket server is running on port 8080.
 - Use ngrok to expose your backend to the internet and ensure Filestack can reach the webhook endpoint.
 - Verify that your API key is correct and has the necessary permissions.
 
-##Contributing
+## Contributing
 Feel free to fork the repository, open issues, or submit pull requests. All contributions are welcome!
 
-##License
+## License
 This project is licensed under the MIT License.
 
 ##Acknowledgments
-Filestack API Documentation
-ngrok for exposing local servers
+[Filestack API Documentation] (https://www.filestack.com/docs/)
+[ngrok] (https://ngrok.com/) for exposing local servers
 The Node.js and WebSocket community for guidance and inspiration
