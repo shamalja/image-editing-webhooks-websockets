@@ -105,6 +105,7 @@ const filestackApiKey = 'YOUR_API_KEY'; // Replace with your Filestack API key``
 ## Example Output
 
 **Original Image:** Displays the uploaded image.
+
 **Thumbnail:** Displays the generated thumbnail beside the original image.
 
 ## Troubleshooting
@@ -121,5 +122,7 @@ This project is licensed under the MIT License.
 
 ##Acknowledgments
 [Filestack API Documentation] (https://www.filestack.com/docs/)
+
 [ngrok] (https://ngrok.com/) for exposing local servers
+
 The Node.js and WebSocket community for guidance and inspiration
