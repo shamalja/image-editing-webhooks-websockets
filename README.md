@@ -5,8 +5,11 @@ This project demonstrates an application where users can upload an image via the
 ## Features
 
 **Image Upload:** Allows users to upload images using the Filestack API.
+
 **Filestack Webhooks:** Processes uploaded images and generates thumbnails.
+
 **WebSocket Integration:** Updates the frontend in real-time with the generated thumbnail URL.
+
 **Responsive Design:** Clean and user-friendly UI.
 
 ##Technologies Used
