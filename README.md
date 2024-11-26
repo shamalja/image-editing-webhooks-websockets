@@ -66,8 +66,8 @@ This project demonstrates an application where users can upload an image via the
 
 #### javascript
 
-```const secret = 'YOUR_WEBHOOK_SECRET'; // Replace with your Filestack webhook secret
-const filestackApiKey = 'YOUR_API_KEY'; // Replace with your Filestack API key```
+`const secret = 'YOUR_WEBHOOK_SECRET'; // Replace with your Filestack webhook secret`
+`const filestackApiKey = 'YOUR_API_KEY'; // Replace with your Filestack API key`
 
 - Start the backend server:
 
