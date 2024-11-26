@@ -67,6 +67,7 @@ This project demonstrates an application where users can upload an image via the
 #### javascript
 
 `const secret = 'YOUR_WEBHOOK_SECRET'; // Replace with your Filestack webhook secret`
+
 `const filestackApiKey = 'YOUR_API_KEY'; // Replace with your Filestack API key`
 
 - Start the backend server:
@@ -110,18 +111,18 @@ This project demonstrates an application where users can upload an image via the
 **Thumbnail:** Displays the generated thumbnail beside the original image.
 
 ## Troubleshooting
+
 - Ensure the Filestack Webhook secret matches the one configured in the backend.
 - Check the WebSocket server is running on port 8080.
 - Use ngrok to expose your backend to the internet and ensure Filestack can reach the webhook endpoint.
 - Verify that your API key is correct and has the necessary permissions.
 
-## Contributing
-Feel free to fork the repository, open issues, or submit pull requests. All contributions are welcome!
 
 ## License
 This project is licensed under the MIT License.
 
-##Acknowledgments
+## Acknowledgments
+
 [Filestack API Documentation] (https://www.filestack.com/docs/)
 
 [ngrok] (https://ngrok.com/) for exposing local servers
