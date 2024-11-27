@@ -102,7 +102,8 @@ This project demonstrates an application where users can upload an image via the
 │   └── index.js   # Node.js backend handling webhook and WebSocket
 ├── frontend
 │   └── index.html # Frontend HTML file for the image upload UI
-└── README.md      # This file \```
+└── README.md      # This file\```
+
 
 ## Example Output
 
