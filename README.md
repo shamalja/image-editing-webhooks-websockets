@@ -97,7 +97,7 @@ This project demonstrates an application where users can upload an image via the
 - After the webhook processes the uploaded image, the thumbnail will appear next to the original image.
 
 ## Project Structure
-.
+```.
 ├── backend
 │   └── index.js   # Node.js backend handling webhook and WebSocket
 ├── frontend
