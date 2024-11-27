@@ -90,7 +90,9 @@ These technologies can be seamlessly integrated into your applications to elevat
 
 `const client = filestack.init('YOUR_API_KEY'); // Replace with your Filestack API Key`
 
-- Open the HTML file in a browser.
+- Open the HTML file in a browser.  
+  *Note*: If you encounter issues while testing locally, ensure the frontend is running on a local server (e.g., http-server or live-server) to bypass browser restrictions related to APIs or WebSockets.
+
 
 ## Usage
 - Open the frontend in your browser.
