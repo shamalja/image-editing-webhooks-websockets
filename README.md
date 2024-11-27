@@ -2,6 +2,8 @@
 
 This project demonstrates an application where users can upload an image via the frontend, and the backend processes the image through a webhook using Filestack's services. A thumbnail is generated for the uploaded image, and the WebSocket server sends the generated thumbnail's URL to the frontend, where it is displayed alongside the original image.
 
+These technologies can be seamlessly integrated into your applications to elevate user experience and functionality.
+
 ## Features
 
 **Image Upload:** Allows users to upload images using the Filestack API.
