@@ -96,15 +96,6 @@ This project demonstrates an application where users can upload an image via the
 - The original image will display instantly.
 - After the webhook processes the uploaded image, the thumbnail will appear next to the original image.
 
-## Project Structure
-```.
-├── backend
-│   └── index.js   # Node.js backend handling webhook and WebSocket
-├── frontend
-│   └── index.html # Frontend HTML file for the image upload UI
-└── README.md      # This file\```
-
-
 ## Example Output
 
 **Original Image:** Displays the uploaded image.
